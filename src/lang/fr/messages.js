@@ -16,5 +16,11 @@ module.exports = {
         cv: 'CV',
         index: 'Accueil',
         project: 'Projets'
+    },
+    projects: {
+        cube_engine: "Moteur de rendu graphique 3D utilisant des",
+        tipe: "Réalisé en CPGE, rendu graphique et génération procédural de surface terrestre",
+        blind_bird: "Jeu réalisé dans le cadre de la Global Game Jam 2017",
+        sgn: "Développement d'application pour le Student Gaming Network"
     }
 }

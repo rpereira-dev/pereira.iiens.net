@@ -14,7 +14,13 @@ module.exports = {
         about: 'About me',
         cours: 'Lessons (ENSIIE)',
         cv: 'CV/Resume',
-        index: 'Index',
+        index: 'Home',
         project: 'Projects'
+    },
+    projects: {
+        cube_engine: "my 3D Game engine which uses ",
+        tipe: "Realized as part of the contest to enter french Engineer school : graphic rendering and generation of land surface",
+        blind_bird: "A game created using Unity3D, made during the Global Game Jam 2017",
+        sgn: "Software development for the French 'Student Gaming Network'"
     }
 }

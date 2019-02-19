@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 // les pages
 import CV from '@/pages/CV/Page';
 import Index from '@/pages/Index/Page';
+import Projects from '@/pages/Projects/Page';
 
 // le router
 export default new VueRouter({
@@ -24,7 +25,7 @@ export default new VueRouter({
 
         {
             path: '/projects',
-            component: Index,
+            component: Projects,
             name: 'Projects'
         },
 
