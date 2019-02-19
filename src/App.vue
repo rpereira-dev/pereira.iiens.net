@@ -25,12 +25,24 @@ html, body {
   height: calc(100vh - 4rem);
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .35s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+
 </style>
 
 <template>
   <div id="app">
     <navbar id="navbar"></navbar>
-    <router-view id="content"></router-view>
+    <transition name="fade">
+      <router-view id="content"></router-view>
+    </transition>
   </div>
 </template>
 

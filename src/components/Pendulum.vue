@@ -88,7 +88,7 @@ export default {
                 let ctx = canvas.getContext("2d");
         
                 let x0 = canvas.width * 0.5;
-                let y0 = canvas.height * 0.3;
+                let y0 = canvas.height * 0.4;
 
                 let scale = ((canvas.height < canvas.width) ? canvas.height : canvas.width) * 0.5 / (this.l1 + this.l2) * 0.8;
 
@@ -103,6 +103,10 @@ export default {
                 let r0 = (r1 + r2) * 0.5;
 
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.font = "30px Arial";
+                ctx.textBaseline = "middle";
+                ctx.textAlign = "center";
+
 
                 drawLine(ctx, x0 - r0 * 4, y0, x0 + r0 * 4, y0, "black", r0 * 0.5);
                 drawLine(ctx, x0, y0, x1, y1, "gray", r1 * 0.5);

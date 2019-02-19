@@ -8,6 +8,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
+  box-shadow: 0 8px 8px rgba(0,0,0,.3);
 }
 
 .navbar-items {
@@ -69,6 +70,10 @@
 	margin-right: 5px;
 }
 
+.navbar-item i {
+  margin-right: 0.6rem;
+}
+
 
 </style>
 
@@ -81,19 +86,19 @@
       <div class="navbar-items">
 
         <div class="navbar-item" v-on:click.stop="$router.push('/')">
-          {{$lang.messages.navbar.index}}
+          <i class="fas fa-home"></i> {{$lang.messages.navbar.index}}
         </div>
 
         <div class="navbar-item" v-on:click.stop="openTab('http://skutnik.iiens.net/cours')">
-          {{$lang.messages.navbar.cours}}
+          <i class="fas fa-book"></i> {{$lang.messages.navbar.cours}}
         </div>
 
         <div class="navbar-item" v-on:click.stop="$router.push('/cv')">
-          {{$lang.messages.navbar.cv}}
+          <i class="far fa-file"></i> {{$lang.messages.navbar.cv}}
         </div>
 
         <div class="navbar-item" v-on:click.stop="$router.push('/projects')">
-          {{$lang.messages.navbar.project}}
+          <i class="fas fa-project-diagram"></i> {{$lang.messages.navbar.project}}
         </div>
 
         <div class="navbar-item languagepicker">
