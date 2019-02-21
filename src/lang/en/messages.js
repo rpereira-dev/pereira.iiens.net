@@ -27,6 +27,7 @@ module.exports = {
         blind_bird: "A game created using Unity3D, made during the Global Game Jam 2017",
         sgn: "Software development for the French 'Student Gaming Network'",
         subsetsum: "Study of a NP-problem, with various solution implemented in OCaml (French)",
-        pathfinding: "Path-finding algorithm comparison (breadth first search, depth-search, Dijkstra, A*)"
+        pathfinding: "Path-finding algorithm comparison (breadth first search, depth-search, Dijkstra, A*)",
+        sci_prog: "This project consisted in representing graphically local nuclear density of an atomic system."
     }
 }

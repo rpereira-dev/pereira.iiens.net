@@ -12,8 +12,11 @@ html, body {
   width: 100%;
   height: 100%;
   background: #f4f4f4;
+  background-image: url("/static/images/bg.jpg");
+  background-repeat:no-repeat;
   overflow: hidden;
 }
+
 
 #navbar {
   width: 100vw;
@@ -24,6 +27,21 @@ html, body {
   width: 100vw;
   height: calc(100vh - 4rem);
 }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 72%;
+  height: calc(100% - 4rem);
+  overflow: auto;
+  margin: 2rem 14%;
+  background: rgba(255, 255, 255, 0.5);
+  border: solid rgb(112, 112, 112) 1px;
+  text-align: center;
+  overflow: auto;
+  box-shadow: 0 8px 8px rgba(0,0,0,.3);
+}
+
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity .35s;

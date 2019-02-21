@@ -1,7 +1,8 @@
 <style>
 
 .navbar {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  border: solid rgb(112, 112, 112) 1px;
   color: #454545;
   display: flex;
   flex-direction: row;
@@ -27,47 +28,39 @@
 
 .navbar-item:hover {
   color: black;
-  border-bottom: .2rem solid black;
+  border-bottom: .2rem solid rgb(112, 112, 112);
 }
 
 .languagepicker {
   z-index: 2;
-	background-color: #FFF;
 	display: inline-block;
 	padding: 0;
-	height: 3rem;
+	height: 4rem;
 	overflow: hidden;
-	transition: all .3s ease;
+	transition: all .4s ease;
 	vertical-align: top;
 }
 
 .languagepicker:hover {
-	/* don't forget the 1px border */
 	height: calc(8rem + 1px);
   border-bottom: none;
 }
 
-.languagepicker a {
-	color: #000;
-	text-decoration: none;
+.languagepicker:hover .li-others {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .languagepicker li {
 	display: block;
-	padding: 0px 20px;
 	line-height: 4rem;
 }
 
-.languagepicker li:hover{
-	background-color: #EEE;
-}
-
-.languagepicker a:first-child li {
-	background: #FFF !important;
+.languagepicker li:hover {
+	background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .languagepicker li img {
-	margin-right: 5px;
+	margin-right: 0.4rem;
 }
 
 .navbar-item i {
@@ -104,7 +97,7 @@
         <div class="navbar-item languagepicker">
             <span v-if="picked"><li><img :src="picked.logo">{{picked.name}}</li></span>
             <template v-for="(lang, iso) in langs">
-              <span v-if="lang != picked" v-bind:key="iso" v-on:click.stop="setLang(iso)"><li><img :src="lang.logo">{{lang.name}}</li></span>
+              <span v-if="lang != picked" v-bind:key="iso" v-on:click.stop="setLang(iso)"><li class="li-others"><img :src="lang.logo">{{lang.name}}</li></span>
             </template>
         </div>      
 

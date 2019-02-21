@@ -6,8 +6,11 @@
 .cv {
   display: flex;
   flex-direction: row;
+  overflow: auto;
   width: 100%;
   height: 100%;
+  margin: 0 0;
+  padding: 1rem 0;
 }
 
 .cv-item {
@@ -15,7 +18,7 @@
 }
 
 .cv-item-pdf {
-  width: 30%;
+  width: 45%;
   height: 100%;
   margin: auto;
 }
@@ -23,14 +26,6 @@
 .cv-item-pdf-title {
   text-align: center;
   padding: 1rem 0;
-}
-
-.cv-item-info {
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-  width: 20%;
 }
 
 .cv-content-link {
@@ -48,7 +43,7 @@
 <template>
   <div class="content">
 
-    <div class="cv">
+    <div class="cv content-wrapper">
       
       <div class="cv-item-pdf">
         <div class="cv-item-pdf-title" target="__blank"><a href="/static/CV/fr/cv.pdf">Téléchargement CV Français</a></div>

@@ -27,6 +27,8 @@ module.exports = {
         blind_bird: "Jeu réalisé dans le cadre de la Global Game Jam 2017",
         sgn: "Développement d'application pour le Student Gaming Network",
         subsetsum: "Etude d'un problème NP, avec des solveurs en OCaml",
-        pathfinding: "Comparaison d'algorithme de recherches de plus court chemin (parcours en largeur, parcours en profondeur, Dijkstra, A*)"
+        pathfinding: "Comparaison d'algorithme de recherches de plus court chemin (parcours en largeur, parcours en profondeur, Dijkstra, A*)",
+        sci_prog: "Ce projet consistait à représenter graphiquement la densité nucléaire local d'un système atomique."
+
     }
 }

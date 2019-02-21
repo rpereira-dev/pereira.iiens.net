@@ -1,18 +1,7 @@
 <style>
-.content-index {
-  display: flex;
-  flex-direction: column;
-  width: 72%;
-  height: calc(100% - 4rem);
-  overflow: auto;
-  margin: 2rem 14%;
-  background: white;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 8px 8px rgba(0,0,0,.3);
-}
 
 #pendulum {
+  cursor: pointer;
 }
 
 .content-index h1 {
@@ -41,7 +30,7 @@
 
 <template>
   <div class="content">
-    <div class="content-index">
+    <div class="content-wrapper">
       <h1>{{$lang.messages.index.welcome_msg}}</h1>
       <p>{{$lang.messages.index.info}}</p>
       <p>{{$lang.messages.index.bye}}</p>
@@ -60,7 +49,7 @@
           <p>LinkedIn - <a target="__blank" href="https://www.linkedin.com/in/romain-pereira/">https://www.linkedin.com/in/romain-pereira/</a></p>
           <p>E-mail - <a href="mailto:romain.pereira@ensiie.fr">romain.pereira@ensiie.fr</a></p>
           <p>{{$lang.messages.index.phone}} - <a href="#">+33 6 13 64 77 15</a></p>
-          <pendulum id="pendulum"></pendulum>
+          <p v-on:click="openTab()"><pendulum id="pendulum"></pendulum></p>
         </div>
 
       </div>
@@ -74,6 +63,13 @@ import Pendulum from "@/components/Pendulum";
 export default {
   components: {
     Pendulum
+  },
+
+  methods: {
+    openTab() {
+      const url = this.$lang.getLang() == 'fr' ? 'https://fr.wikipedia.org/wiki/Pendule_double' : 'https://en.wikipedia.org/wiki/Double_pendulum';
+      window.open(url, '__blank');
+    }
   }
 };
 </script>
